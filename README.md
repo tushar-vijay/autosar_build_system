@@ -32,14 +32,23 @@ A simple `main.c` calls dummy functions from each layer and prints a sample mess
 ## Project Structure
 
 /
+
 ├── asw/ # Application layer (sources + CMake)
+
 ├── bsw/ # Basic software layer (sources + CMake)
+
 ├── mcal/ # Microcontroller abstraction (sources + CMake)
+
 ├── cdd/ # Complex device driver (sources + CMake)
+
 ├── CMakeLists.txt # Top-level CMake configuration. 
+
 ├── main.c # Example entrypoint. 
-├── main.h # Header for main (placeholder). 
+
+├── main.h # Header for main (placeholder).
+
 ├── README.md # This file
+
 └── .gitignore # Ignored build files / artifacts.
 
 ---
@@ -65,11 +74,14 @@ cmake --build .     # build
 ### Windows (CMake / build.bat)
 
 - From a Developer Command Prompt or MSYS2/MinGW:
+
+```bash
 mkdir build
 cd build
 cmake .. -G "Visual Studio 16 2019"   # or another appropriate generator
 cmake --build .
 .\main_exec.exe
+```
 
 - Or run the included build.bat if present (review contents first).
 
@@ -79,7 +91,9 @@ Each AUTOSAR layer (asw, bsw, mcal, cdd) contains its own CMakeLists.txt that bu
 
 main.c demonstrates usage by calling the dummy functions exported by each layer; when run it prints:
 
+```
 Sample Build Successful
+```
 
 ## Development notes & tips
 
